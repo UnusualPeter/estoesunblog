@@ -1,0 +1,5 @@
+# La carpeta del entorno virtual
+eneb/
+
+# La carpeta con la configuración de Visual Studio Code
+.vscode/
