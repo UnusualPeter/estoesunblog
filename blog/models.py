@@ -1,12 +1,14 @@
 from django.conf import settings
 from django.db import models
 
+from ckeditor.fields import RichTextField
+
 # Create your models here.
 class Post(models.Model):
     """To post the article of the blog."""
 
     title = models.CharField(max_length=255)
-    body = models.TextField()
+    body = RichTextField(blank=True, null=True)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
